@@ -4,7 +4,7 @@ import _test_get_cossim as test
 import lbp_feature as lbp
 import ssim_feature as ssim
 from PyQt5 import QtWidgets, QtCore, QtGui, Qt
-from PyQt5.QtGui import QIcon, QPixmap
+from PyQt5.QtGui import QIcon, QPixmap, QFont
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 import numpy as np
@@ -47,6 +47,7 @@ class Ui_mainWindow(QtWidgets.QMainWindow):
         self.res_label1 = QtWidgets.QLabel(self.centralWidget)
         self.res_label1.setGeometry(QtCore.QRect(1150, 95, 300, 50))
         self.res_label1.setText("Method Efros-Leung\nSimilarity: ")
+        self.res_label1.setFont(QFont("Calibri", 12, QFont.Bold))
         self.res_label1.setObjectName("label_1")
         # self.res_label1.setAlignment(Qt.AlignCenter)
         # self.res_label1.setFrameStyle(QtWidgets.QFrame.StyledPanel | QFrame.Raised)
@@ -62,6 +63,7 @@ class Ui_mainWindow(QtWidgets.QMainWindow):
         self.res_label2 = QtWidgets.QLabel(self.centralWidget)
         self.res_label2.setGeometry(QtCore.QRect(1150, 315, 300, 50))
         self.res_label2.setText("Method Optim\nSimilarity: ")
+        self.res_label2.setFont(QFont("Calibri", 12, QFont.Bold))
         self.res_label2.setObjectName("label_2")
 
         # labels for the third method result
@@ -75,6 +77,7 @@ class Ui_mainWindow(QtWidgets.QMainWindow):
         self.res_label3 = QtWidgets.QLabel(self.centralWidget)
         self.res_label3.setGeometry(QtCore.QRect(1150, 535, 300, 50))
         self.res_label3.setText("Method Quilting\nSimilarity: ")
+        self.res_label3.setFont(QFont("Calibri", 12, QFont.Bold))
         self.res_label3.setObjectName("label_3")
 
         # labels for the fourth method result
@@ -88,6 +91,7 @@ class Ui_mainWindow(QtWidgets.QMainWindow):
         self.res_label4 = QtWidgets.QLabel(self.centralWidget)
         self.res_label4.setGeometry(QtCore.QRect(1150, 755, 300, 50))
         self.res_label4.setText("Method DeepTexture\nSimilarity: ")
+        self.res_label4.setFont(QFont("Calibri", 12, QFont.Bold))
         self.res_label4.setObjectName("label_4")
 
         # Button - select input image
@@ -144,21 +148,25 @@ class Ui_mainWindow(QtWidgets.QMainWindow):
                 sim = np.zeros([4], np.float)
                 for i in range(4):
                     O_IN = {}
-                    O_IN['s_img_url_a'] = "./" + self.input_img_name + ".png"
+                    O_IN['s_img_url_a'] = "./samples/" + self.input_img_name + ".png"
                     O_IN['s_img_url_b'] = resultpath + "result_" + str(i+1) + ".png"
                     sim[i] = test.proc_main(O_IN)
                 self.res_img_label1.setPixmap(QtGui.QPixmap(resultpath + "result_1.png"))
                 self.res_img_label1.setScaledContents(True)
                 self.res_label1.setText("Method Efros-Leung\nSimilarity: " + str(sim[0]))
+                self.res_label1.setFont(QFont("Calibri", 12, QFont.Bold))
                 self.res_img_label2.setPixmap(QtGui.QPixmap(resultpath + "result_2.png"))
                 self.res_img_label2.setScaledContents(True)
                 self.res_label2.setText("Method Optim\nSimilarity: " + str(sim[1]))
+                self.res_label2.setFont(QFont("Calibri", 12, QFont.Bold))
                 self.res_img_label3.setPixmap(QtGui.QPixmap(resultpath + "result_3.png"))
                 self.res_img_label3.setScaledContents(True)
                 self.res_label3.setText("Method Quilting\nSimilarity: " + str(sim[2]))
+                self.res_label3.setFont(QFont("Calibri", 12, QFont.Bold))
                 self.res_img_label4.setPixmap(QtGui.QPixmap(resultpath + "result_4.png"))
                 self.res_img_label4.setScaledContents(True)
                 self.res_label4.setText("Method DeepTexture\nSimilarity: " + str(sim[3]))
+                self.res_label4.setFont(QFont("Calibri", 12, QFont.Bold))
         if select_value=="LBP":
             # print("confirm GIST")
             if self.input_img_name != "":
@@ -167,21 +175,25 @@ class Ui_mainWindow(QtWidgets.QMainWindow):
                 sim = np.zeros([4], np.float)
                 for i in range(4):
                     O_IN = {}
-                    O_IN['s_img_url_a'] = "./" + self.input_img_name + ".png"
+                    O_IN['s_img_url_a'] = "./samples/" + self.input_img_name + ".png"
                     O_IN['s_img_url_b'] = resultpath + "result_" + str(i+1) + ".png"
                     sim[i] = lbp.proc_main(O_IN)
                 self.res_img_label1.setPixmap(QtGui.QPixmap(resultpath + "result_1.png"))
                 self.res_img_label1.setScaledContents(True)
                 self.res_label1.setText("Method Efros-Leung\nSimilarity: " + str(sim[0]))
+                self.res_label1.setFont(QFont("Calibri", 12, QFont.Bold))
                 self.res_img_label2.setPixmap(QtGui.QPixmap(resultpath + "result_2.png"))
                 self.res_img_label2.setScaledContents(True)
                 self.res_label2.setText("Method Optim\nSimilarity: " + str(sim[1]))
+                self.res_label2.setFont(QFont("Calibri", 12, QFont.Bold))
                 self.res_img_label3.setPixmap(QtGui.QPixmap(resultpath + "result_3.png"))
                 self.res_img_label3.setScaledContents(True)
                 self.res_label3.setText("Method Quilting\nSimilarity: " + str(sim[2]))
+                self.res_label3.setFont(QFont("Calibri", 12, QFont.Bold))
                 self.res_img_label4.setPixmap(QtGui.QPixmap(resultpath + "result_4.png"))
                 self.res_img_label4.setScaledContents(True)
                 self.res_label4.setText("Method DeepTexture\nSimilarity: " + str(sim[3]))
+                self.res_label4.setFont(QFont("Calibri", 12, QFont.Bold))
         if select_value == "SSIM":
             # print("confirm GIST")
             if self.input_img_name != "":
@@ -190,21 +202,26 @@ class Ui_mainWindow(QtWidgets.QMainWindow):
                 sim = np.zeros([4], np.float)
                 for i in range(4):
                     O_IN = {}
-                    O_IN['s_img_url_a'] = "./" + self.input_img_name + ".png"
+                    O_IN['s_img_url_a'] = "./samples/" + self.input_img_name + ".png"
                     O_IN['s_img_url_b'] = resultpath + "result_" + str(i+1) + ".png"
                     sim[i] = ssim.ssim(O_IN)
                 self.res_img_label1.setPixmap(QtGui.QPixmap(resultpath + "result_1.png"))
                 self.res_img_label1.setScaledContents(True)
                 self.res_label1.setText("Method Efros-Leung\nSimilarity: " + str(sim[0]))
+                self.res_label1.setFont(QFont("Calibri", 12, QFont.Bold))
                 self.res_img_label2.setPixmap(QtGui.QPixmap(resultpath + "result_2.png"))
                 self.res_img_label2.setScaledContents(True)
                 self.res_label2.setText("Method Optim\nSimilarity: " + str(sim[1]))
+                self.res_label2.setFont(QFont("Calibri", 12, QFont.Bold))
                 self.res_img_label3.setPixmap(QtGui.QPixmap(resultpath + "result_3.png"))
                 self.res_img_label3.setScaledContents(True)
                 self.res_label3.setText("Method Quilting\nSimilarity: " + str(sim[2]))
+                self.res_label3.setFont(QFont("Calibri", 12, QFont.Bold))
                 self.res_img_label4.setPixmap(QtGui.QPixmap(resultpath + "result_4.png"))
                 self.res_img_label4.setScaledContents(True)
                 self.res_label4.setText("Method DeepTexture\nSimilarity: " + str(sim[3]))
+                self.res_label4.setFont(QFont("Calibri", 12, QFont.Bold))
+                print('DONE !!')
 
 
 

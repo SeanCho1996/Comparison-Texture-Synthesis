@@ -65,7 +65,7 @@ def proc_main(O_IN):
             hist1[dst1[i, j]] += 1
     hist1 = hist1 / (dst1.shape[0]*dst1.shape[1])
     print("histogram_LBP input image:", hist1)
-    print(sum(hist1))
+    # print(sum(hist1))
 
     dst2 = cal_lbp(img_gs2, 1, 8)
     hist2 = np.zeros([256])
@@ -74,10 +74,13 @@ def proc_main(O_IN):
             hist2[dst2[i, j]] += 1
     hist2 = hist2 / (dst2.shape[0] * dst2.shape[1])
     print("histogram_LBP generated image:", hist2)
+    # print(sum(hist2))
 
-    f_img_sim = np.inner(hist1, hist2) / 0.06045487200160946233973
-    #/ 0.06045487200160946233973 radius = 1
-    #/ 0.03185515380920886374660 radius = 3
+    f_img_sim = 0
+    for i in range(hist1.shape[0]):
+        dist = np.sqrt(hist1[i] * hist2[i])
+        f_img_sim += dist
+
     print("%.23f" % f_img_sim)
 
     return f_img_sim
