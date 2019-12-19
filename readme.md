@@ -11,6 +11,14 @@ The comparison metrics we choose are GIST feature, LBP feature(circular rotation
 </br>
 我们选择了三种相似度对比的方法来比较合成纹理与源纹理的差异。
 </br>
+## simple introduction
+test.py is the main program which provides a graphical interface to compare the results of different methods.
+</br>
+To launch the comparison, first you have to choose an input image in the file "samples" where we provides 15 examples of ultrasound texture images. Their corresponding output images are pre-generated and stored in the file "image_results".
+</br>
+Then you have to choose a comparison metric and confirm.
+</br>
+Finally you will see the results of each method and the similarity.
 ## source codes of texture synthesis methods
 * Method Pixel Copy </br>
 Please refer to [this repo](https://github.com/asteroidhouse/texturesynth)
