@@ -5,11 +5,13 @@ In this repo we try to compare different methods of ultrasonic texture synthesis
 The comparison metrics we choose are GIST feature, LBP feature(circular rotation invariant LBP) and SSIM feature.
 
 * Method Pixel Copy </br>
-Please refer to [this repo](https://github.com/asteroidhouse/texturesynth/tree/master/examples)
+Please refer to [this repo](https://github.com/asteroidhouse/texturesynth)
 
 * Method Optim </br>
+Please refer to [this repo](https://github.com/wang-ps/TextureSynthesis)
 
 * Method Quilting </br>
+Please refer to [this repo](https://github.com/PJunhyuk/ImageQuilting)
 
 * Method DeepTexture </br>
 Please refer to [this repo](https://github.com/meet-minimalist/Texture-Synthesis-Using-Convolutional-Neural-Networks)
