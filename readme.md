@@ -23,7 +23,7 @@ Then you have to choose a comparison metric and confirm.
 </br>
 Finally you will see the results of each method and the similarity.
 ## source codes of texture synthesis methods
-* Method Pixel Copy </br>
+* **Method Pixel Copy** </br>
 Please refer to [this repo](https://github.com/asteroidhouse/texturesynth)
 
 * Method Optim </br>
