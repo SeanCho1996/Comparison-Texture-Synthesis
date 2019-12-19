@@ -26,21 +26,20 @@ Finally you will see the results of each method and the similarity.
 * **Method Pixel Copy** </br>
 Please refer to [this repo](https://github.com/asteroidhouse/texturesynth)
 
-* Method Optim </br>
+* **Method Optim** </br>
 Please refer to [this repo](https://github.com/wang-ps/TextureSynthesis)
 
-* Method Quilting </br>
+* **Method Quilting** </br>
 Please refer to [this repo](https://github.com/PJunhyuk/ImageQuilting)
 
-* Method DeepTexture </br>
+* **Method DeepTexture** </br>
 Please refer to [this repo](https://github.com/meet-minimalist/Texture-Synthesis-Using-Convolutional-Neural-Networks)
 ## explanation of comparison methods
-* GIST </br>
+* **GIST** </br>
 [description](http://ilab.usc.edu/siagian/Research/Gist/Gist.html) in English </br>
 [description](https://zhuanlan.zhihu.com/p/51173086) in Chinese
 
-* LBP(circular and rotation invariant)</br>
-[An article](https://www.google.com.hk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=7&ved=2ahUKEwiTw6j56cLmAhWLFcAKHdbJDUEQFjAGegQICRAC&url=http%3A%2F%2Fwww4.comp.polyu.edu.hk%2F~cslzhang%2Fpaper%2FPR_10_Mar_LBPV.pdf&usg=AOvVaw2kyKRaXwuBBHsWpyP8Qst_)precisely explains the LBP feature
-</br>
+* **LBP**(circular and rotation invariant)</br>
+[An article](https://www.google.com.hk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=7&ved=2ahUKEwiTw6j56cLmAhWLFcAKHdbJDUEQFjAGegQICRAC&url=http%3A%2F%2Fwww4.comp.polyu.edu.hk%2F~cslzhang%2Fpaper%2FPR_10_Mar_LBPV.pdf&usg=AOvVaw2kyKRaXwuBBHsWpyP8Qst_)precisely explains the LBP feature</br>
 [description](https://blog.csdn.net/zouxy09/article/details/7929531) in Chinese
 
