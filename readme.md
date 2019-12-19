@@ -37,7 +37,6 @@ Please refer to [this repo](https://github.com/meet-minimalist/Texture-Synthesis
 ## explanation of comparison methods
 * GIST </br>
 [description](http://ilab.usc.edu/siagian/Research/Gist/Gist.html) in English
-</br>
 [description](https://zhuanlan.zhihu.com/p/51173086) in Chinese
 
 * LBP(circular and rotation invariant)</br>
