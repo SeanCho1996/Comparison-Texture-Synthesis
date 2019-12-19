@@ -43,7 +43,7 @@ Please refer to [this repo](https://github.com/meet-minimalist/Texture-Synthesis
 [An article](https://www.google.com.hk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=7&ved=2ahUKEwiTw6j56cLmAhWLFcAKHdbJDUEQFjAGegQICRAC&url=http%3A%2F%2Fwww4.comp.polyu.edu.hk%2F~cslzhang%2Fpaper%2FPR_10_Mar_LBPV.pdf&usg=AOvVaw2kyKRaXwuBBHsWpyP8Qst_) precisely explains the LBP feature</br>
 [description](https://blog.csdn.net/zouxy09/article/details/7929531) in Chinese
 
-* **SSIM**
+* **SSIM**</br>
 [explication](https://en.wikipedia.org/wiki/Structural_similarity) of wiki-pedia</br>
 [description](https://blog.csdn.net/sinat_36438332/article/details/88173349) in Chinese
 
