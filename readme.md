@@ -14,9 +14,12 @@ The comparison metrics we choose are GIST feature, LBP feature(circular rotation
 ## simple introduction
 test.py is the main program which provides a graphical interface to compare the results of different methods.
 </br>
+</br>
 To launch the comparison, first you have to choose an input image in the file "samples" where we provides 15 examples of ultrasound texture images. Their corresponding output images are pre-generated and stored in the file "image_results".
 </br>
+</br>
 Then you have to choose a comparison metric and confirm.
+</br>
 </br>
 Finally you will see the results of each method and the similarity.
 ## source codes of texture synthesis methods
